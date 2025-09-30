@@ -1,0 +1,6 @@
+
+docker buildx build . --tag dev-linux-base
+docker run -dit --name dev-linux-loc -p 2222:22 dev-linux-base
+
+
+winpty docker exec -it dev-linux-loc bash
